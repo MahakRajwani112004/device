@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirect Page</title>
+  </head>
+  <body>
+    <script>
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      if (/android/i.test(userAgent)) {
+        window.location.href = "market://details?id=com.ionage.app";
+      } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        window.location.href = "https://apps.apple.com/app/id1591774543";
+      } else {
+        window.location.href = "https://www.ionage.in/";
+      }
+    </script>
+  </body>
+</html>
